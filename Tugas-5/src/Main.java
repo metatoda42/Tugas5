@@ -1,4 +1,3 @@
-
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
@@ -21,6 +20,9 @@ public class Main implements ActionListener {
 	private static JLabel luaspermukaan;
 	private static JButton hitung;
 	private static JButton reset;
+	private static JLabel hkel1;
+	private static JLabel hkel2;
+	private static JLabel hkelal;
 	
 	public static void main(String[] args) {
 		
@@ -43,10 +45,12 @@ public class Main implements ActionListener {
 		volume = new JLabel("Volume: ");
 		luaspermukaan = new JLabel("Luas Permukaan: ");
 		reset = new JButton("Reset");
-		
+		hkel1 = new JLabel("Kel. Persegi 1: ");
+		hkel2 = new JLabel("Kel. Persegi 2: ");
+		hkelal = new JLabel("Kel. Alas: ");
 		
 		//LAYOUT
-		frame.setSize(350, 350);
+		frame.setSize(350, 400);
 		judul.setBounds(100, 0, 300, 60);
 		labelpanjang.setBounds(10, 50, 80, 25);
 		panjang.setBounds(80, 50, 200, 25);
@@ -79,6 +83,9 @@ public class Main implements ActionListener {
 		panel.add(hasil);
 		panel.add(hluas1);
 		panel.add(hluas2);
+		panel.add(hkel1);
+		panel.add(hkel2);
+		panel.add(hkelal);
 		panel.add(volume);
 		panel.add(luaspermukaan);
 	}
@@ -119,10 +126,13 @@ public class Main implements ActionListener {
 			
 			hasil.setText("Hasil: ");
 			halas.setText("Luas Alas: " + baru.alas);
-			hluas1.setText("Persegi 1: " + baru.sisi1);
-			hluas2.setText("Persegi 2: "+ baru.sisi2);
+			hluas1.setText("Luas P.Panjang 1: " + baru.sisi1);
+			hluas2.setText("Luas P.Panjang 2: "+ baru.sisi2);
 			volume.setText("Volume: " + baru.volum);
 			luaspermukaan.setText("Luas Permukaan: " + baru.luastotal);
+			hkel1.setText("Kel. Persegi 1: " + baru.kel1);
+			hkel2.setText("Kel. Persegi 2: " + baru.kel2);
+			hkelal.setText("Kel. Alas: " + baru.kelal);
 			
 			hasil.setBounds(10, 150, 200, 25);
 			halas.setBounds(10, 150, 200, 25);
@@ -130,6 +140,9 @@ public class Main implements ActionListener {
 			hluas2.setBounds(10, 200, 200, 25);
 			volume.setBounds(10, 225, 200, 25);
 			luaspermukaan.setBounds(10, 250, 200, 25);
+			hkel1.setBounds(10, 275, 200, 25);
+			hkel2.setBounds(10, 300, 200, 25);
+			hkelal.setBounds(10, 325, 200, 25);
 		}
 		else {
 			hasil.setText("");
@@ -138,6 +151,9 @@ public class Main implements ActionListener {
 			hluas2.setText("");
 			volume.setText("");
 			luaspermukaan.setText("");
+			hkel1.setText("");
+			hkel2.setText("");
+			hkelal.setText("");
 			
 		}
 	}

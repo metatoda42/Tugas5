@@ -4,6 +4,9 @@ final class Balok extends Volume {
 	double sisi2;
 	double volum;
 	double luastotal;
+	double kel1;
+	double kel2;
+	double kelal;
 	
 	void setsemua() {
 		alas=alas();
@@ -12,5 +15,8 @@ final class Balok extends Volume {
 		luastotal= luastotal();
 		volum= volume();
 		luastotal=luastotal();
+		kel1=keliling1();
+		kel2=keliling2();
+		kelal=kelalas();
 	}
 }
